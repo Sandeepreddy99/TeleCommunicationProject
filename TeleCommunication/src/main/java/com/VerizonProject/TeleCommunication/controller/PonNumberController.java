@@ -32,6 +32,7 @@ private PonNumberService ponNumberService;
     }
 
     @PutMapping("/{id}/deactivate")
+    // to deactivate the pon
     public ResponseEntity<Void> deactivatePonNumber(@PathVariable Long id) {
         ponNumberService.deactivatePonNumber(id);
         return ResponseEntity.noContent().build();
